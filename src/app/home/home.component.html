@@ -1,0 +1,27 @@
+<table class="table ">
+    <thead>
+    <tr>
+      <th scope="col" [appSort]="offersList" data-order="desc" data-name="id" class="text-center">#</th>
+      <th scope="col"  [appSort]="offersList" data-order="desc" data-name="provider" class="text-center">Provider<i class="fas fa-times"></i></th>
+      <th scope="col"  [appSort]="offersList" data-order="desc" data-name="price" class="text-center" >Pricing</th>
+      <th scope="col"  [appSort]="offersList" data-order="desc" data-name="ram" class="text-center">RAM(in Gb)</th>
+      <th scope="col"  [appSort]="offersList" data-order="desc" data-name="cpu" class="text-center">CPU(in count)</th>
+      <th scope="col"  [appSort]="offersList" data-order="desc" data-name="bandwidth" class="text-center">Bandwidth(in Gb)</th>
+      <th scope="col"  [appSort]="offersList" data-order="desc" data-name="url" class="text-center">Url</th>
+      <th scope="col"  [appSort]="offersList" data-order="desc" data-name="rating" class="text-center">Ratings</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let list of offersList">
+      <th scope="row" class="text-center">{{ list.id }}</th>
+      <td class="text-center">{{list.hprovider}} </td>
+      <td class="text-center"><b>$</b>{{list.price}}</td>
+      <td class="text-center">{{list.ram}} gb</td>
+      <td class="text-center">{{list.cpu}} vcore</td>
+      <td class="text-center">{{list.bandwidth}}</td>
+      <td class="text-center">{{list.url}}</td>
+      <td class="text-center">{{list.rating}}</td>
+    </tr>
+    </tbody>
+  </table>
+  
