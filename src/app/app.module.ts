@@ -6,10 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavComponent } from './nav/nav.component';
+import { AddOffersComponent } from './add-offers/add-offers.component';
+import { CompanyComponent } from './company/company.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    NavComponent,
+    AddOffersComponent,
+    CompanyComponent
     ],
   imports: [
     BrowserModule,

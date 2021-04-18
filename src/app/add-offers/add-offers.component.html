@@ -1,0 +1,135 @@
+<app-nav></app-nav>
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <form [formGroup] = 'offerForm' (ngSubmit)="collectdata()">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputHprovider">Hosting Provider</label>
+                        <input type="text " class="form-control border border-primary" formControlName='hprovider' placeholder="Hosting provider">
+                        <span class="error border border-danger" *ngIf= "hprovider.invalid && hprovider.touched">Hprovider must be in between 3 to 20 alphabets</span>
+                      </div>
+                      
+                      <div class="form-group col-md-6">
+                        <label for="inputPricing">Pricing</label>
+                        <input type="number" class="form-control border border-primary" formControlName='price' placeholder="$" >
+                        <span class="error border border-danger" *ngIf= "price.invalid && price.touched">Please enter a valid price tag</span>
+
+                      </div>
+                     
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group col-md-2">
+                      <label for="inputRam">RAM</label>
+                      <select id="inputRam" class="form-control border border-primary" formControlName='ram'>
+                          <option>128</option>
+                          <option>256</option>
+                          <option>512</option>
+                          <option>768</option>
+                          <option>1024</option>
+                          <option>1536</option>
+                          <option>2048</option>
+                          <option>2560</option>
+                          <option>3072</option>
+                          <option>3584</option>
+                          <option>4096</option>
+                          <option>4608</option>
+                          <option>5120</option>
+                          <option>5632</option>
+                          <option>6144</option>
+                          <option>6656</option>
+                          <option>7168</option>
+                          <option>7680</option>
+                          <option>8192</option>
+                          <option>8704</option>
+                          <option>9216</option>
+                          <option>9728</option>
+                          <option>10240</option>
+                        </select>                  
+                      </div>
+                    <div class="form-group col-md-2">
+                      <label for="inputCore">Vcore</label>
+                      <select id="inputCore" class="form-control border border-primary" formControlName='vcore'>
+                          <option>0.5</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                          <option>13</option>
+                          <option>14</option>
+                          <option>15</option>
+                          <option>16</option>
+                          <option>17</option>
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                        </select>                   
+                      </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                          <label for="inputBandwidth">Bandwidth</label>
+                          <select id="inputBandwidth" class="form-control border border-primary" formControlName='bandwidth'>
+                            <option>0.5</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            </select>                  
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputurl">Hosting Provider</label>
+                            <input type="text" class="form-control border border-primary" formControlName='url' placeholder="Place Affiliate url">
+                          </div>
+                          <div class="form-group col-md-2">
+                            <label for="inputRating">Ratings</label>
+                            <select formControlName='rating' class="form-control border border-primary">
+                                <option>0.5</option>
+                                <option>1</option>
+                                <option>1.5</option>
+                                <option>2</option>
+                                <option>2.5</option>
+                                <option>3</option>
+                                <option>3.5</option>
+                                <option>4</option>
+                                <option>4.5</option>
+                                <option>5</option>
+                              </select>                  
+                            </div>
+                      </div>
+                      
+                    
+                    <button type="submit" class="btn btn-primary" [disabled]="!offerForm.valid">Submit</button>
+                  </form>
+            </div>
+        
+        </div>
+    </div>
+
+</div>

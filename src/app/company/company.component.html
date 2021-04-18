@@ -1,0 +1,48 @@
+<app-nav></app-nav>
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <form [formGroup] = 'hproviderForm' (ngSubmit)="collectdata()">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputHprovider">Hosting Provider</label>
+                        <input type="text " class="form-control border border-primary" formControlName='hprovider' placeholder="Hosting provider">
+                        <span class="error border border-danger" *ngIf= "hprovider.invalid && hprovider.touched">Hprovider must be in between 3 to 20 alphabets</span>
+                      </div>
+                    </div>
+                   
+                 
+                    <div class="form-row">
+                      <div class="form-group col-md-10">
+                        <label for="inputRating">Description</label>
+                        <input type="textarea" class="form-control border border-primary" formControlName='description' placeholder="Description">         
+                        </div>
+                        
+                          <div class="form-group col-md-2">
+                            <label for="inputRating">Ratings</label>
+                            <select formControlName='rating' class="form-control border border-primary">
+                                <option>0.5</option>
+                                <option>1</option>
+                                <option>1.5</option>
+                                <option>2</option>
+                                <option>2.5</option>
+                                <option>3</option>
+                                <option>3.5</option>
+                                <option>4</option>
+                                <option>4.5</option>
+                                <option>5</option>
+                              </select>                  
+                            </div>
+                      </div>
+                      
+                    
+                    <button type="submit" class="btn btn-primary" [disabled]="!hproviderForm.valid">Submit</button>
+                  </form>
+            </div>
+        
+        </div>
+    </div>
+
+</div>

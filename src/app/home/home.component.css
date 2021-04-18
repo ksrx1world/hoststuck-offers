@@ -1,14 +1,4 @@
-html {
-    position: relative;
-    min-height: 100%;
-  }
-  
-  body {
-    overflow-x: hidden;
-    font-family: lato;
-    background-color: #EEEEEE;
-  }
-  
+
   .textside {
     margin-left: 25px;
   }
@@ -141,10 +131,7 @@ html {
     overflow: auto;
     max-height: 75vh;
   }
-  
-  #mainNav .navbar-collapse .navbar-sidenav li:hover{
-   
-  }
+
   
   #mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     cursor: pointer;
