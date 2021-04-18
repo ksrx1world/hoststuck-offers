@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Offers } from '../util/interface/offers';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,41 +7,31 @@ import { Offers } from '../util/interface/offers';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  offersList : Offers[] = [
+  offerForm = new FormGroup(
     {
-      id: 1,
-       hprovider: "Hoststuck",
-        price: 5,
-        ram: 1,
-        cpu: 1,
-        bandwidth: 1,
-        url: "https://hoststuck.com",
-        rating: "5"
-    },
-    {
-      id: 2,
-       hprovider: "gtrtr",
-        price: 4,
-        ram: 4,
-        cpu: 2,
-        bandwidth: 4,
-        url: "https://hststuck.com",
-        rating: "2"
-    },
-    {
-      id: 3,
-      hprovider: "ZIl",
-        price: 2,
-        ram: 7,
-        cpu: 8,
-        bandwidth: 5,
-        url: "https://hoststuck.com",
-        rating: "1"
+      hprovider: new FormControl('', [Validators.required]),
+      price: new FormControl('', [Validators.required]),
+      ram: new FormControl('', [Validators.required]),
+      vcore: new FormControl('', [Validators.required]),
+      bandwidth: new FormControl('', [Validators.required]),
+      url :new FormControl('', [Validators.required]),
+      rating: new FormControl('', [Validators.required])
     }
-  ];
-  
+  );
+
+  get hprovider(){ return this.offerForm.get('hprovider') };
+  get price() {return this.offerForm.get('price')};
+  get ram() {return this.offerForm.get('ram')};
+  get vcore() {return this.offerForm.get('vcore')};
+  get bandwidth() {return this.offerForm.get('bandwidth')};
+  get url() {return this.offerForm.get('url')};
+  get rating() {return this.offerForm.get('rating')};
 
   constructor() { }
+  
+  collectdata(){
+    console.log(this.offerForm.value)
+  }
 
   ngOnInit(): void {
   }

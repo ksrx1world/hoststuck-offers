@@ -5,19 +5,18 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SortDirective } from './directive/sort.directive';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SortDirective,
-  ],
+    HomeComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
